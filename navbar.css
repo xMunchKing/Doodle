@@ -1,0 +1,98 @@
+/* CSS for the navigation bar */
+.navbar-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar-toggle {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+
+
+#navbar {
+    width: 0; /* Start with the navbar collapsed */
+    overflow: hidden; /* Hide overflowing content */
+    transition: width 0.2s ease; /* Smooth transition for width changes over 0.5 seconds */
+    position: fixed; /* Fix the navbar position */
+    top: 0; /* Place it at the top */
+    left: 0; /* Place it at the left */
+    z-index: 1000; /* Ensure it's above other content */
+
+}
+
+#navbar.active {
+    width: 250px; /* Adjust the width to expand fully */
+}
+
+
+
+
+#navbar ul {
+    height: 200px;
+    padding: 5px;
+    padding-top: 10px;
+    border: 5px solid #fff;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #485e73, #34495e); /* Adjusted gradient background */
+    list-style-type: none; /* Remove bullet points */
+
+}
+
+
+
+#navbar li {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white; /* Set the font color to white */
+}
+
+#navbar li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.square {
+    position: absolute;
+    top: 33px;
+    left: 16px;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-color: #2c3e50;
+    border-radius: 30%; /* Round the corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+    border: 2px solid #fff; /* Add a white border */
+    z-index: 2000; /* Ensure it's above the navbar */
+}
+
+.square:hover {
+    background-color: #34495e; /* Darken the color on hover */
+}
+
+.square::after {
+    content: ""; /* Create a pseudo-element for the arrow */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg); /* Rotate the pseudo-element */
+    width: 12px; /* Adjust the width of arrow*/
+    height: 12px; /* Adjust the height of arrow*/
+    border-top: 2px solid #fff; /* Style the arrow */
+    border-right: 2px solid #fff; /* Style the arrow */
+    transition: border-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.square:hover::after {
+    border-color: #2c3e50; /* Darken the arrow color on hover */
+}

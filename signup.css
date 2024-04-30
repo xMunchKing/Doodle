@@ -1,0 +1,96 @@
+/* CSS for the sign-up form */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2c3e50; /* Dark blue-gray color */
+}
+
+form {
+    width: 350px; /* Adjust width as needed */
+    height: 476px;
+    padding: 15px;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #485e73, #34495e); /* Adjusted gradient background */
+    margin: auto; /* Center the form horizontally */
+    text-align: center; /* Center the text inside the form */
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.input-group input,
+.input-group select {
+    width: 70%;
+    padding: 6px;  /*Changes the size of the input boxes */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px; /* Change the font size of inputs and selects */
+    text-align: center; /* Center the text inside the form */
+
+}
+
+
+.input-group label a {
+    color: #0096FF; /* Change the color of the anchor text to blue */
+}
+
+
+button[type="submit"] {
+    width: 60%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px; /* Change the font size of inputs and selects */
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* this is all the password requirement popup */
+
+.input-group {
+    position: relative;
+}
+
+.error-message {
+    position: absolute;
+    visibility: hidden;
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.input-group:hover .error-message {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* End password verification popup */
